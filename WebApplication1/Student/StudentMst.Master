@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentMst.master.cs" Inherits="WebApplication1.Student.StudentMst" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <style>
+        .logout-container {
+            text-align: right;
+            padding: 15px 30px;
+            background-color: #f8f9fa;
+        }
+
+        .btn-logout {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #c82333;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                 
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+             <a href="../Login.aspx"<asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false">Logout</asp:LinkButton></a>
+        
+        </div>
+    </form>
+</body>
+</html>
